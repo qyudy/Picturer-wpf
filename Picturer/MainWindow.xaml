@@ -1,0 +1,10 @@
+﻿<Window x:Class="Picturer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Picturer" WindowStartupLocation="CenterScreen" Height="600" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <TreeView x:Name="MainListBox" Margin="0,0,0,40" Drop="MainListBox_Drop" AllowDrop="True" />
+        <CheckBox Content="随机模式" Name="randomMode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Button Content="开始浏览" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="100,0,0,5" Width="100" Click="Button_Click" Height="30"/>
+    </Grid>
+</Window>

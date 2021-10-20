@@ -1,0 +1,16 @@
+﻿<Window x:Class="Picturer.Show"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pic="clr-namespace:Picturer"
+        Title="show" x:Name="Window" Unloaded="Window_Unloaded" Loaded="Window_Loaded" PreviewMouseWheel="Window_MouseWheel" PreviewKeyDown="Window_KeyDown" MouseUp="Window_MouseUp">
+    <Grid x:Name="LayoutRoot">
+        <ScrollViewer x:Name="imageScrollViewer" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+            <pic:GIFImageControl x:Name="tbShow" Stretch="Uniform" MouseMove="tbShow_MouseMove" MouseRightButtonDown="tbShow_MouseRightButtonDown" Unloaded="tbShow_Unloaded" MouseLeftButtonDown="tbShow_MouseLeftButtonDown" />
+        </ScrollViewer>
+        <CheckBox HorizontalAlignment="Right" Name="randomMode" VerticalAlignment="Top" Checked="randomMode_Checked" Unchecked="randomMode_Unchecked" Opacity="0.1" Width="35" Height="35" Margin="1,0,0,0" VerticalContentAlignment="Bottom" />
+        <CheckBox HorizontalAlignment="Right" Name="autoMode" VerticalAlignment="Bottom" Checked="autoMode_Checked" Unchecked="autoMode_Unchecked" Opacity="0.1" Width="35" Height="35" />
+        <TextBlock Name="TitleText" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Slider HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="100" Width="20" Name="autoSlider" Orientation="Vertical" Value="5" Margin="0,0,8,40" Opacity="0.1" ValueChanged="autoSlider_ValueChanged" />
+
+    </Grid>
+</Window>
